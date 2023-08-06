@@ -1,0 +1,265 @@
+<?php require 'controller.php'; ?>
+<!DOCTYPE html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.customer {
+  z-index: 1;
+  position: absolute;
+  border: none;
+  color: yellow;
+  text-align: center;
+  left: 650px;
+  font-size: 17px;
+  top:1px;
+  opacity: 1;
+  transition: 0.3s;
+  transform-origin: 0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+
+<div style="padding-left:16px">
+
+</div>
+
+
+
+
+</body>
+    
+<!--  search   -->
+    
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+    
+#container {
+  position: absolute;
+  top: 26%;
+  left: 7%;
+  margin-top: -150px;
+  margin-left: -148px;
+}
+    
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+</body>
+    
+<body>
+    <script>
+        var el = document.getElementById("container");
+       
+    </script>
+    <div id="container">
+        <p>
+        <a class="active" href="http://localhost/HMI/news.php">News</a>
+                <img src="ss" width="380" height="100">
+        </a>
+        </p>    
+    </div>
+            
+</body>
+
+<!-- left menu -->
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 55%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<br>
+    <br>
+    
+<div class="sidebar">
+  <a href="http://localhost/HMI/fruits.php">FRUITS</a>
+  <a href="http://localhost/HMI/vegetables.php">VEGETABLES</a>
+  <a href="http://localhost/HMI/foodgrains.php"><i></i>FOODGRAINS</a>
+  <a href="http://localhost/HMI/beverage.php"><i></i>BEVERAGES</a>
+  <a href="http://localhost/HMI/snacks.php"><i></i>SNACKS</a>
+  <a href="http://localhost/HMI/egg.php"><i></i>EGG MEAT AND FISH</a>
+  <a href="http://localhost/HMI/gourmet.php"><i></i>GOURMET</a>
+  <a href="http://localhost/HMI/dairy.php"><i></i>DAIRY</a>
+    
+  
+</div>
+                    
+</body>
+    
+<!-- slideshow bar-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0
+    }
+</style>
+<body>
+
+
+<div class="w3-content w3-display-container" style = "position:relative; left:80px; top:20px; background-color:yellow;">
+  <img class="mySlides" src="img.jpg" height="200"  width="1000">
+  <img class="mySlides" src="img1.jpg" height="200" width="1000">
+  <img class="mySlides" src="img2" height="200" width="1000">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:70%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+     
+</body>
+
+</html>

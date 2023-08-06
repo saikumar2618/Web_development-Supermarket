@@ -1,0 +1,444 @@
+<?php require_once 'controller.php'; ?>
+<!DOCTYPE html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.customer {
+  z-index: 1;
+  position: absolute;
+  border: none;
+  color: yellow;
+  text-align: center;
+  left: 650px;
+  font-size: 17px;
+  top:1px;
+  opacity: 1;
+  transition: 0.3s;
+  transform-origin: 0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+<div class="customer">
+<p>WELCOME <?php echo $_SESSION['username']; ?></p>
+</div>
+
+<div style="padding-left:16px">
+
+</div>
+
+<!---for change address---->
+<style>
+.open-button {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  left: 900px;
+  top:10px;
+  opacity: 1;
+  transition: 0.3s;
+  transform-origin: 0;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 200px;
+  right: 500px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .ua-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.form-container .ua-btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+
+<button class="open-button" onclick="openForm()">Change Address</button>
+
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Update Address</h1>
+
+    <label for="newaddress"><b>New Address</b></label>
+    <input type="text" placeholder="Enter new address" name="newaddress" required>
+
+    <button type="submit" name="addr-btn" class="ua-btn">Update</button>
+    <button type="butt" class="cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<!----for change pswrd---->
+<style>
+.open-pbutton {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  left: 1050px;
+  top:10px;
+  opacity: 1;
+  transition: 0.3s;
+  transform-origin: 0;
+}
+
+/* The popup form - hidden by default */
+.pform-popup {
+  display: none;
+  position: fixed;
+  bottom: 200px;
+  right: 500px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.pform-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.pform-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.pform-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.pform-container .up-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.pform-container .cancel {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.pform-container .up-btn:hover, .open-pbutton:hover {
+  opacity: 1;
+}
+.logout {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  left: 1250px;
+  top:10px;
+  opacity: 1;
+  transition: 0.3s;
+  transform-origin: 0;
+}
+</style>
+
+<button class="open-pbutton" onclick="openForm1()">Change password</button>
+
+<div class="pform-popup" id="myForm1">
+  <form class="pform-container">
+    <h1>Update password</h1>
+
+    <label for="newpassword"><b>New password</b></label>
+    <input type="password" placeholder="Enter new password" name="newpsw" required>
+
+    <button type="submit" name="psw-btn" class="up-btn">Update</button>
+    <button type="butt" class="cancel" onclick="closeForm1()">Close</button>
+  </form>
+</div>
+
+<button name="logout" class="logout">Logout</button>
+
+<script>
+function openForm1() {
+  document.getElementById("myForm1").style.display = "block";
+}
+
+function closeForm1() {
+  document.getElementById("myForm1").style.display = "none";
+}
+</script>
+
+
+
+</body>
+    
+<!--  search   -->
+    
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+    
+#container {
+  position: absolute;
+  top: 26%;
+  left: 7%;
+  margin-top: -150px;
+  margin-left: -148px;
+}
+    
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+</body>
+    
+<body>
+    <script>
+        var el = document.getElementById("container");
+       
+    </script>
+    <div id="container">
+        <p>
+        <a href="file:///C:/Users/SIDDHANT/Desktop/menu.html"> 
+                <img src="ss" width="380" height="100">
+        </a>
+        </p>    
+    </div>
+            
+</body>
+
+<!-- left menu -->
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 85%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 140;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+.sidebar a.active1 {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a class="active1" href="file:///C:/xampp/htdocs/supermarket/fruits.html"><i></i>FRUITS</a>
+  <a href="#services"><i></i>VEGETABLES</a>
+  <a href="#clients"><i></i>FOODGRAINS</a>
+  <a href="#contact"><i></i>BEVERAGES</a>
+  <a href="#contact"><i></i>SNACKS AND BRANDED FOODS</a>
+  <a href="#contact"><i></i>BEAUTY AND HYGIENE</a>
+  <a href="#contact"><i></i>EGG MEAT AND FISH</a>
+  <a href="#contact"><i></i>GOURMET</a>
+  <a href="#contact"><i></i>BAKERY CAKES AND DIARY</a>
+  <a href="#contact"><i></i>CLEANING AND HOUSEHOLD</a>
+  <a href="#contact"><i></i>BABY CARE</a>
+</div>
+
+
+
+
+
+
+
+     
+</body>
+</html>
