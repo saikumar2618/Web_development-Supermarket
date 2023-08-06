@@ -2,7 +2,7 @@
 
 In this project we have developed online supermarket website. Food stuffs with various categories are mentioned over here.
 We have used the following tools for the project :
-1) Brackets (for html,php code) you can use sublime also.
+1) Brackets (for html,php code) 
 2) xampp (for databse and apache server)
 
 USING Xampp :- 
@@ -13,7 +13,7 @@ Save all your files/folders of your project in C:---> xampp----> htdocs
 Now when you run, go to chrome and type http://localhost/HMI/WDL1.html. Here in C--->xampp---> htdocs, HMI folder name was created and all files were saved into it. WDL1.html is the first html file which needs to be run and all other files will be runned as you go on navigating into the website.
 
 
-You can see the functions of all buttons and the GUI part in the OUTPUT file which is uploaded here.
+**You can see the functions of all buttons and the GUI part in the OUTPUT file which is uploaded here.**
 
 phpMyAdmin (Database server in xampp):-
 For creating the database follow these steps:
@@ -45,8 +45,7 @@ FUTURE SCOPE for this log out button - As we log out we go to the main page of s
 
 Change address and change password button - This changes the address/password by providing the new one.
 
-Search button is available in this project for searching the products but it is not yet implemented.
-We thought of creating another table which contains all available products and by clicking search button the code will search if the provided product is available in database products or not. If not then dialog box should appear saying 'Currently this product is not available'.
+Future Task: Search button is available in this project for searching the products but it is not yet implemented.
 
 About code and files-
  There are html files php files and the images of the product.
